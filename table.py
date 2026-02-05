@@ -12,7 +12,7 @@ class Table:
             "<tr>" + "".join(f"<td>{cell}</td>" for cell in row) + "</tr>"
             for row in self.rows
         )
-        return f"<table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table>"
+        return f"<div class=\"card\"><table><thead><tr>{head}</tr></thead><tbody>{body}</tbody></table></div>"
 
 def parse_csv(file_path):
     with open(file_path, newline = "") as f:
